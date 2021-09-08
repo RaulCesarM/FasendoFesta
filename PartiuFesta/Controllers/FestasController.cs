@@ -19,13 +19,13 @@ namespace PartiuFesta.Controllers
             _context = context;
         }
 
-        // GET: Festas
+       
         public async Task<IActionResult> Index()
         {
             return View(await _context.Festas.ToListAsync());
         }
 
-        // GET: Festas/Details/5
+       
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -43,15 +43,13 @@ namespace PartiuFesta.Controllers
             return View(festa);
         }
 
-        // GET: Festas/Create
+       
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Festas/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Nome_Da_Festa,Anfitriao,TipoFesta,Cidade,Bairro,Rua,Numero,DataDaFesta,Link_Do_Google_Maps,Id")] Festa festa)
@@ -66,7 +64,7 @@ namespace PartiuFesta.Controllers
             return View(festa);
         }
 
-        // GET: Festas/Edit/5
+       
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
@@ -82,9 +80,7 @@ namespace PartiuFesta.Controllers
             return View(festa);
         }
 
-        // POST: Festas/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, [Bind("Nome_Da_Festa,Anfitriao,TipoFesta,Cidade,Bairro,Rua,Numero,DataDaFesta,Link_Do_Google_Maps,Id")] Festa festa)
@@ -117,7 +113,7 @@ namespace PartiuFesta.Controllers
             return View(festa);
         }
 
-        // GET: Festas/Delete/5
+       
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -135,7 +131,7 @@ namespace PartiuFesta.Controllers
             return View(festa);
         }
 
-        // POST: Festas/Delete/5
+        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)

@@ -137,7 +137,7 @@ namespace PartiuFesta.Controllers
             return View(participante);
         }
 
-        // POST: Participantes/Delete/5
+      
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
