@@ -1,0 +1,64 @@
+﻿@model PartiuFesta.Models.Participante
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h3>Quer Realmente excluir</h3>
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome_Do_Participante)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome_Do_Participante)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OqueVaiLevar)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OqueVaiLevar)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Acompanhante)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Acompanhante)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Imagem)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Imagem)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Confirmado)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Confirmado)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Festa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Festa.Anfitriao)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir" class="btn btn-info" /> |
+        <a class="btn btn-info" asp-action="Index">Voltar</a>
+        
+    </form>
+</div>

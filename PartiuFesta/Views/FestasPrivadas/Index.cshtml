@@ -1,0 +1,67 @@
+﻿@model IEnumerable<PartiuFesta.Models.FestaPrivada>
+
+@{
+    ViewData["Title"] = "Lista de Festas Privadas";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<p>
+    <a class="btn btn-outline-success" asp-action="Create">Faser Nova Festa</a>
+
+</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome_Da_Festa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Anfitriao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoFesta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.DataDaFesta)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome_Da_Festa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Anfitriao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoFesta)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataDaFesta)
+                </td>
+
+                <td>
+
+                    <a asp-action="Details" class="btn btn-info" asp-route-id="@item.Id">Detalhes</a>
+
+                    <a class="btn btn-info" asp-controller="ParticipantesPrivados" asp-action="Index">Participar</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

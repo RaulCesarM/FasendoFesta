@@ -1,0 +1,76 @@
+﻿@model PartiuFesta.Models.Festa
+
+@{
+    ViewData["Title"] = "Editar Festa";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome_Da_Festa" class="control-label"></label>
+                <input asp-for="Nome_Da_Festa" class="form-control" />
+                <span asp-validation-for="Nome_Da_Festa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Anfitriao" class="control-label"></label>
+                <input asp-for="Anfitriao" class="form-control" />
+                <span asp-validation-for="Anfitriao" class="text-danger"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="Cidade" class="control-label"></label>
+                <input asp-for="Cidade" class="form-control" />
+                <span asp-validation-for="Cidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bairro" class="control-label"></label>
+                <input asp-for="Bairro" class="form-control" />
+                <span asp-validation-for="Bairro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rua" class="control-label"></label>
+                <input asp-for="Rua" class="form-control" />
+                <span asp-validation-for="Rua" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Numero" class="control-label"></label>
+                <input asp-for="Numero" class="form-control" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataDaFesta" class="control-label"></label>
+                <input asp-for="DataDaFesta" class="form-control" />
+                <span asp-validation-for="DataDaFesta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Link_Do_Google_Maps" class="control-label"></label>
+                <input asp-for="Link_Do_Google_Maps" class="form-control" />
+                <span asp-validation-for="Link_Do_Google_Maps" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TipoFesta" class="control-label"></label><br />
+                <input type="radio" name="TipoFesta" value="4" checked />Casual<br />
+                <input type="radio" name="TipoFesta" value="1" />Infantil <br />
+                <input type="radio" name="TipoFesta" value="2" />Aniversario <br />
+                <input type="radio" name="TipoFesta" value="3" />violão<br />
+                <input type="radio" name="TipoFesta" value="5" />HardCore<br />
+                <input type="radio" name="TipoFesta" value="6" />Swing<br />
+
+            </div>
+
+
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />|
+                <a class="btn btn-info" asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+

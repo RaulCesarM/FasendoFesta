@@ -1,0 +1,80 @@
+﻿@model PartiuFesta.Models.FestaPrivada
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Excluir</h1>
+
+<h3>Deseja realmente excluir ?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Convite)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Convite)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome_Da_Festa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome_Da_Festa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Anfitriao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Anfitriao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoFesta)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TipoFesta)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rua)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rua)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataDaFesta)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataDaFesta)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Link_Do_Google_Maps)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Link_Do_Google_Maps)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a class="btn btn-info" asp-action="Index">Voltar</a>
+    </form>
+</div>

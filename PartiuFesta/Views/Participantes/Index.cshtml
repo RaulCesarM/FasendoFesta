@@ -1,0 +1,70 @@
+﻿@model IEnumerable<PartiuFesta.Models.Participante>
+
+@{
+    ViewData["Title"] = "Lista de Participantes";
+}
+
+<h1>@ViewData["Title"]  </h1>
+
+<p>
+    <a class="btn btn-info" asp-action="Create">Participar</a>
+</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome_Do_Participante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OqueVaiLevar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Idade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acompanhante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Confirmado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Festa)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome_Do_Participante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OqueVaiLevar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acompanhante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Imagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Confirmado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Festa.Anfitriao)
+            </td>
+            <td class="text text-right">
+
+                <a asp-action="Details" class="btn btn-info" asp-route-id="@item.Id">Detalhes</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

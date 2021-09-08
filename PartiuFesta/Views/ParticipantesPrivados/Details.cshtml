@@ -1,0 +1,62 @@
+﻿@model PartiuFesta.Models.ParticipantePrivado
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes</h1>
+
+
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome_Do_Participante)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome_Do_Participante)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OqueVaiLevar)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OqueVaiLevar)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Acompanhante)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Acompanhante)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Imagem)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Imagem)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Confirmado)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Confirmado)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FestasPrivadas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FestasPrivadas.Anfitriao)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-info" asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Delete" class="btn btn-danger" asp-route-id="@Model.Id">Excluir</a>|
+    <a class="btn btn-info" asp-action="Index">Voltar</a>
+</div>

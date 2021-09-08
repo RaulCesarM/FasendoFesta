@@ -1,0 +1,58 @@
+﻿@model PartiuFesta.Models.ParticipantePrivado
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FestaPrivadaId" class="control-label"></label>
+                <select asp-for="FestaPrivadaId" class="form-control" asp-items="ViewBag.FestaPrivadaId"></select>
+                <span asp-validation-for="FestaPrivadaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nome_Do_Participante" class="control-label"></label>
+                <input asp-for="Nome_Do_Participante" class="form-control" />
+                <span asp-validation-for="Nome_Do_Participante" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OqueVaiLevar" class="control-label"></label>
+                <input asp-for="OqueVaiLevar" class="form-control" />
+                <span asp-validation-for="OqueVaiLevar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Idade" class="control-label"></label>
+                <input asp-for="Idade" class="form-control" />
+                <span asp-validation-for="Idade" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Acompanhante" /> @Html.DisplayNameFor(model => model.Acompanhante)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imagem" class="control-label"></label>
+                <input asp-for="Imagem" class="form-control" />
+                <span asp-validation-for="Imagem" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Confirmado" /> @Html.DisplayNameFor(model => model.Confirmado)
+                </label>
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />|
+                <a class="btn btn-info" asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
