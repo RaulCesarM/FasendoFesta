@@ -16,19 +16,38 @@
 
 
 </br>
+
+ 
+ ![image](https://user-images.githubusercontent.com/37316110/132593395-cb00e844-15f5-4dfe-b1ef-9487c6bf5f7c.png)
+ 
+ </br>
+  <h2> Listagem das festas</h2>
  </br>
  
- ![image](https://user-images.githubusercontent.com/37316110/132594198-57768958-6449-4cd8-98be-a73e417b1a2c.png)![image](https://user-images.githubusercontent.com/37316110/132593395-cb00e844-15f5-4dfe-b1ef-9487c6bf5f7c.png)![image](https://user-images.githubusercontent.com/37316110/132594259-8e13f914-5f0c-4caa-9ac6-2829d4f4116f.png)
-  ![image](https://user-images.githubusercontent.com/37316110/132593679-be0037ea-eff0-47ad-bb20-c46e148322c9.png)
-![image](https://user-images.githubusercontent.com/37316110/132593988-d691f624-9c3e-410a-aef5-42af239da6b9.png)
-![image](https://user-images.githubusercontent.com/37316110/132594052-ef3afc1f-7213-4ae9-8e28-cb1d8ac48a01.png)
+ ![image](https://user-images.githubusercontent.com/37316110/132594198-57768958-6449-4cd8-98be-a73e417b1a2c.png)
+ 
+  </br>
+ 
+ 
+  <h2> Edição e criação de nova festa com inserção de participantes </h2>
+   </br>
+<p>
+
+ 
+ <img src="https://user-images.githubusercontent.com/37316110/132594259-8e13f914-5f0c-4caa-9ac6-2829d4f4116f.png" width=400 height=400>
+<img src="https://user-images.githubusercontent.com/37316110/132593679-be0037ea-eff0-47ad-bb20-c46e148322c9.png" alt="some text" width=400 height=400>
+
+</p>
+
 </br>
 
+ <h2> localização do google maps </h2>
+<p>
 
+<img src="https://user-images.githubusercontent.com/37316110/132593988-d691f624-9c3e-410a-aef5-42af239da6b9.png" width=400 height=400>
+<img src="https://user-images.githubusercontent.com/37316110/132594052-ef3afc1f-7213-4ae9-8e28-cb1d8ac48a01.png" alt="some text" width=400 height=400>
 
-
-
-
+</p>
 
 
 
