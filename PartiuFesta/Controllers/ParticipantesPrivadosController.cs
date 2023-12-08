@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PartiuFesta.Data.Context;
 using PartiuFesta.Models;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace PartiuFesta.Controllers
 {
@@ -19,14 +18,12 @@ namespace PartiuFesta.Controllers
             _context = context;
         }
 
-        
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.ParticipantesPrivados.Include(p => p.FestasPrivadas);
             return View(await applicationDbContext.ToListAsync());
         }
 
-        
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -45,45 +42,30 @@ namespace PartiuFesta.Controllers
             return View(participantePrivado);
         }
 
-       
         public IActionResult Create()
         {
-           ViewData["FestaPrivadaId"] = new SelectList(_context.FestasPrivadas, "Id", "Anfitriao");
-           
+            ViewData["FestaPrivadaId"] = new SelectList(_context.FestasPrivadas, "Id", "Anfitriao");
+
             return View();
         }
 
-
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create( ParticipantePrivado participantePrivado)
+        public async Task<IActionResult> Create(ParticipantePrivado participantePrivado)
         {
             if (ModelState.IsValid)
             {
-              
-
-                    participantePrivado.Id = Guid.NewGuid();
-                    _context.Add(participantePrivado);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
-
-
-              
-
-
-                           
-               
+                participantePrivado.Id = Guid.NewGuid();
+                _context.Add(participantePrivado);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            
-           
+
             ViewData["FestaPrivadaId"] = new SelectList(_context.FestasPrivadas, "Id", "Anfitriao", participantePrivado.FestaPrivadaId);
-           
 
             return View(participantePrivado);
         }
 
-       
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
@@ -102,7 +84,7 @@ namespace PartiuFesta.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id,  ParticipantePrivado participantePrivado)
+        public async Task<IActionResult> Edit(Guid id, ParticipantePrivado participantePrivado)
         {
             if (id != participantePrivado.Id)
             {
@@ -133,7 +115,6 @@ namespace PartiuFesta.Controllers
             return View(participantePrivado);
         }
 
-        
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -152,7 +133,6 @@ namespace PartiuFesta.Controllers
             return View(participantePrivado);
         }
 
-        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)

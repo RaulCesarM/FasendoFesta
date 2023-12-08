@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PartiuFesta.Data.Context;
 using PartiuFesta.Models;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace PartiuFesta.Controllers
 {
@@ -19,13 +17,11 @@ namespace PartiuFesta.Controllers
             _context = context;
         }
 
-     
         public async Task<IActionResult> Index()
         {
             return View(await _context.FestasPrivadas.ToListAsync());
         }
 
-        
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -48,10 +44,9 @@ namespace PartiuFesta.Controllers
             return View();
         }
 
-        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create( FestaPrivada festaPrivada)
+        public async Task<IActionResult> Create(FestaPrivada festaPrivada)
         {
             if (ModelState.IsValid)
             {
@@ -63,7 +58,6 @@ namespace PartiuFesta.Controllers
             return View(festaPrivada);
         }
 
-       
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
@@ -79,7 +73,6 @@ namespace PartiuFesta.Controllers
             return View(festaPrivada);
         }
 
-        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, FestaPrivada festaPrivada)
@@ -112,7 +105,6 @@ namespace PartiuFesta.Controllers
             return View(festaPrivada);
         }
 
-      
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -130,7 +122,6 @@ namespace PartiuFesta.Controllers
             return View(festaPrivada);
         }
 
-      
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
