@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PartiuFesta.Data.Context;
 using PartiuFesta.Models;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace PartiuFesta.Controllers
 {
@@ -19,13 +17,11 @@ namespace PartiuFesta.Controllers
             _context = context;
         }
 
-       
         public async Task<IActionResult> Index()
         {
             return View(await _context.Festas.ToListAsync());
         }
 
-       
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -43,13 +39,11 @@ namespace PartiuFesta.Controllers
             return View(festa);
         }
 
-       
         public IActionResult Create()
         {
             return View();
         }
 
-       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Nome_Da_Festa,Anfitriao,TipoFesta,Cidade,Bairro,Rua,Numero,DataDaFesta,Link_Do_Google_Maps,Id")] Festa festa)
@@ -64,7 +58,6 @@ namespace PartiuFesta.Controllers
             return View(festa);
         }
 
-       
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
@@ -80,7 +73,6 @@ namespace PartiuFesta.Controllers
             return View(festa);
         }
 
-      
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, [Bind("Nome_Da_Festa,Anfitriao,TipoFesta,Cidade,Bairro,Rua,Numero,DataDaFesta,Link_Do_Google_Maps,Id")] Festa festa)
@@ -113,7 +105,6 @@ namespace PartiuFesta.Controllers
             return View(festa);
         }
 
-       
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -131,7 +122,6 @@ namespace PartiuFesta.Controllers
             return View(festa);
         }
 
-        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
